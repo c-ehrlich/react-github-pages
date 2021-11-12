@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/c-ehrlich.github.io/react-github-pages/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/c-ehrlich.github.io/react-github-pages/static/js/main.303ca7a8.chunk.js",
-    "main.js.map": "/c-ehrlich.github.io/react-github-pages/static/js/main.303ca7a8.chunk.js.map",
-    "runtime-main.js": "/c-ehrlich.github.io/react-github-pages/static/js/runtime-main.7fc008fb.js",
-    "runtime-main.js.map": "/c-ehrlich.github.io/react-github-pages/static/js/runtime-main.7fc008fb.js.map",
-    "static/js/2.c8c8d4a2.chunk.js": "/c-ehrlich.github.io/react-github-pages/static/js/2.c8c8d4a2.chunk.js",
-    "static/js/2.c8c8d4a2.chunk.js.map": "/c-ehrlich.github.io/react-github-pages/static/js/2.c8c8d4a2.chunk.js.map",
-    "static/js/3.004fdf74.chunk.js": "/c-ehrlich.github.io/react-github-pages/static/js/3.004fdf74.chunk.js",
-    "static/js/3.004fdf74.chunk.js.map": "/c-ehrlich.github.io/react-github-pages/static/js/3.004fdf74.chunk.js.map",
-    "index.html": "/c-ehrlich.github.io/react-github-pages/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/c-ehrlich.github.io/react-github-pages/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.c8c8d4a2.chunk.js.LICENSE.txt": "/c-ehrlich.github.io/react-github-pages/static/js/2.c8c8d4a2.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/c-ehrlich.github.io/react-github-pages/static/media/logo.6ce24c58.svg"
+    "main.css": "/react-github-pages/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/react-github-pages/static/js/main.303ca7a8.chunk.js",
+    "main.js.map": "/react-github-pages/static/js/main.303ca7a8.chunk.js.map",
+    "runtime-main.js": "/react-github-pages/static/js/runtime-main.7e5b4ffb.js",
+    "runtime-main.js.map": "/react-github-pages/static/js/runtime-main.7e5b4ffb.js.map",
+    "static/js/2.c8c8d4a2.chunk.js": "/react-github-pages/static/js/2.c8c8d4a2.chunk.js",
+    "static/js/2.c8c8d4a2.chunk.js.map": "/react-github-pages/static/js/2.c8c8d4a2.chunk.js.map",
+    "static/js/3.004fdf74.chunk.js": "/react-github-pages/static/js/3.004fdf74.chunk.js",
+    "static/js/3.004fdf74.chunk.js.map": "/react-github-pages/static/js/3.004fdf74.chunk.js.map",
+    "index.html": "/react-github-pages/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/react-github-pages/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.c8c8d4a2.chunk.js.LICENSE.txt": "/react-github-pages/static/js/2.c8c8d4a2.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/react-github-pages/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7fc008fb.js",
+    "static/js/runtime-main.7e5b4ffb.js",
     "static/js/2.c8c8d4a2.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
     "static/js/main.303ca7a8.chunk.js"
