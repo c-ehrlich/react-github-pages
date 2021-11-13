@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
+// we're using MUI 4.x which is outdated
+// also the Roboto font import neeeds to be in public/index.html
+// also we're using CssBaseline in index.js!
+import { Button } from '@material-ui/core';
 
 const PokemonRow = ({ pokemon, onSelect }) => (
   <tr>
     <td>{pokemon.name.english}</td>
     <td>{pokemon.type.join(", ")}</td>
     <td>
-      <button onClick={() => onSelect(pokemon)}>Select!</button>
+      <Button variant="contained" color="primary" onClick={() => onSelect(pokemon)}>Select!</Button>
     </td>
   </tr>
 );
