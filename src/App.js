@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import PropTypes from "prop-types";
-import pokemon from "./pokemon.json";
 
 const PokemonRow = ({ pokemon, onSelect }) => (
   <tr>
@@ -27,14 +26,12 @@ const PokemonInfo = ({ name, base }) => (
   <div>
     <h1>{name.english}</h1>
     <table>
-      {
-        Object.keys(base).map(key => (
-          <tr key={key}>
-            <td>{key}</td>
-            <td>{base[key]}</td>
-          </tr>
-        ))
-      }
+      {Object.keys(base).map((key) => (
+        <tr key={key}>
+          <td>{key}</td>
+          <td>{base[key]}</td>
+        </tr>
+      ))}
     </table>
   </div>
 );
@@ -51,11 +48,18 @@ PokemonInfo.propTypes = {
     "Sp. Defense": PropTypes.number.isRequired,
     Speed: PropTypes.number.isRequired,
   }),
-}
+};
 
 function App() {
   const [filter, filterSet] = useState("");
+  const [pokemon, pokemonSet] = useState([]);
   const [selectedItem, selectedItemSet] = useState(null);
+
+  useEffect(() => {
+    fetch("/react-github-pages/pokemon.json")
+      .then((resp) => resp.json())
+      .then((data) => pokemonSet(data));
+  }, []);
 
   return (
     <div
