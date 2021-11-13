@@ -3,7 +3,9 @@ import PokemonContext from "../PokemonContext";
 import PokemonType from "../PokemonType";
 
 const PokemonInfo = () => {
-  const { selectedPokemon } = useContext(PokemonContext);
+  const {
+    state: { selectedPokemon },
+  } = useContext(PokemonContext);
 
   return selectedPokemon ? (
     <div>
@@ -17,9 +19,7 @@ const PokemonInfo = () => {
         ))}
       </table>
     </div>
-  ) : (
-    null
-  );
+  ) : null;
 };
 
 PokemonInfo.propTypes = PokemonType;
