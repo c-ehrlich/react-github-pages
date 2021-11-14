@@ -1,46 +1,10 @@
-import React, { useEffect } from "react";
 import "./App.css";
 import styled from "@emotion/styled";
 import { CssBaseline } from "@material-ui/core";
-import { createStore } from "redux";
-import { Provider, useSelector, useDispatch } from "react-redux";
 
 import PokemonInfo from "./components/PokemonInfo";
 import PokemonFilter from "./components/PokemonFilter";
 import PokemonTable from "./components/PokemonTable";
-
-const pokemonReducer = (
-  state = {
-    pokemon: [],
-    filter: "",
-    selectedPokemon: null,
-  },
-  action
-) => {
-  // This example kind of doesn't show the point, which is that usually in reducers
-  // an action modifies multiple pieces of state simultaneously
-  switch (action.type) {
-    case "SET_FILTER":
-      return {
-        ...state,
-        filter: action.payload,
-      };
-    case "SET_POKEMON":
-      return {
-        ...state,
-        pokemon: action.payload,
-      };
-    case "SET_SELECTED_POKEMON":
-      return {
-        ...state,
-        selectedPokemon: action.payload,
-      };
-    default:
-      return state;
-  }
-};
-
-const store = createStore(pokemonReducer);
 
 const Title = styled.h1`
   text-align: center;
@@ -57,25 +21,6 @@ const TwoColumnLayout = styled.div`
 `;
 
 function App() {
-  const dispatch = useDispatch();
-  const pokemon = useSelector(({ pokemon }) => pokemon);
-
-  useEffect(() => {
-    console.log("in useEffect");
-    fetch("/react-github-pages/pokemon.json")
-      .then((resp) => resp.json())
-      .then((data) =>
-        dispatch({
-          type: "SET_POKEMON",
-          payload: data,
-        })
-      );
-  }, []);
-
-  if (!pokemon) {
-    return <div>Loading data</div>;
-  }
-
   return (
     <PageContainer>
       <CssBaseline />
@@ -91,16 +36,4 @@ function App() {
   );
 }
 
-const appForExport = () => (
-  <Provider store={store}>
-    <App />
-  </Provider>
-);
-
-export default appForExport;
-
-// export default () => (
-//   <Provider store={store}>
-//     <App />
-//   </Provider>
-// ); // need to do this with Redux
+export default App;
